@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+    let a = 'hello';
+    console.log(a);
+    alert(a);
+    document.write(a);
+
+    let b = 'owu';
+    console.log(b);
+    alert(b);
+    document.write(b);
+
+    let c = 'com';
+    console.log(c);
+    alert(c);
+    document.write(c);
+
+    let d = 'ua';
+    console.log(d);
+    alert(d);
+    document.write(d);
+
+    let e = 1;
+    console.log(e);
+    alert(e);
+    document.write(e);
+
+    let f = 10;
+    console.log(f);
+    alert(f);
+    document.write(f);
+
+    let g = -999;
+    console.log(g);
+    alert(g);
+    document.write(g);
+
+    let h = 123;
+    console.log(h);
+    alert(h);
+    document.write(h);
+
+    let pi = 3.14;
+    console.log(pi);
+    alert(pi);
+    document.write(pi);
+
+    let i = 2.7;
+    console.log(i);
+    alert(i);
+    document.write(i);
+
+    let j = 16;
+    console.log(j);
+    alert(j);
+    document.write(j);
+
+    let k = true;
+    console.log(k);
+    alert(k);
+    document.write(k);
+
+    let l = false;
+    console.log(l);
+    alert(l);
+    document.write(l);
+
+    // - Переприсвоїти кожній змінній з завдання значення на довільне.
+    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+
+    a = 'apple';
+    console.log(a);
+    alert(a);
+    document.write(a);
+
+    b = 'banana';
+    console.log(b);
+    alert(b);
+    document.write(b);
+
+    c = 'coconut';
+    console.log(c);
+    alert(c);
+    document.write(c);
+
+    d = 'date';
+    console.log(d);
+    alert(d);
+    document.write(d);
+
+    e = 5;
+    console.log(e);
+    alert(e);
+    document.write(e);
+
+    f = 55;
+    console.log(f);
+    alert(f);
+    document.write(f);
+
+    g = -5;
+    console.log(g);
+    alert(g);
+    document.write(g);
+
+    h = 555;
+    console.log(h);
+    alert(h);
+    document.write(h);
+
+    pi = 5.55;
+    console.log(pi);
+    alert(pi);
+    document.write(pi);
+
+    i = 5.5;
+    console.log(i);
+    alert(i);
+    document.write(i);
+
+    j = 15;
+    console.log(j);
+    alert(j);
+    document.write(j);
+
+    k = false;
+    console.log(k);
+    alert(k);
+    document.write(k);
+
+    l = true;
+    console.log(l);
+    alert(l);
+    document.write(l);
+
+    // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
+
+    let firstName = 'Vasylyna';
+    let middleName = 'Tarasivna';
+    let lastName = 'Khasanova';
+
+    let person =`${firstName} ${middleName} ${lastName}`;
+
+    // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+
+    let firstName = prompt('Type your name');
+    alert(firstName);
+    let middleName = prompt('Type your surname');
+    alert(middleName);
+    let age = prompt('Type your age');
+    alert(age);
+    console.log('Вітаю, ' + firstName + middleName + '. ' + 'Тобі ' + age + ' років.');
+
+    // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+    //     let a = 100; let b = '100'; let c = true;
+
+    console.log(typeof 100);
+    console.log(typeof '100');
+    console.log(typeof true);
+
+    // - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+    //     В однакових виразах не використовувати однакові оператори!!!
+    //     5 ? 6 -> true
+    // 5 ? 6 -> false
+    // 5 ? 6 -> false
+    // 5 ? 6 -> false
+    // 10 ? 10 -> true
+    // 10 ? 10 -> true
+    // 10 ? 10 -> false
+    // 10 ? 10 -> false
+    // 10 ? 10 -> false
+    // 123 ? '123' -> false
+    // 123 ? '123' -> true
+
+    // 5 < 6 -> true
+    // 5 > 6 -> false
+    // 5 == 6 -> false
+    // 5 <= 6 -> false
+    // 10 === 10 -> true
+    // 10 >= 10 -> true
+    // 10 > 10 -> false
+    // 10 < 10 -> false
+    // 10 != 10 -> false
+    // 123 != '123' -> false
+    // 123 == '123' -> true
+
+    // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+    // let str = "20";
+    // let a = 5;
+    // document.write(str + a + "<br/>");
+    // document.write(str - a + "<br/>");
+    // document.write(str * "2" + "<br/>");
+    // document.write(str / 2 + "<br/>");
+
+    // Відповіді:
+    // 1. 205 (бо number перетвориться в string: '20' + '5' = '205')
+    // 2.15 (бо string пертвориться в number 20-5 = 15)
+    // 3.40 (бо бо string пертвориться в number 20*2 = 40)
+    // 4.10 (бо string перетвориться в number 20/5 = 10).
+
+
+</script>
+</body>
+</html>
