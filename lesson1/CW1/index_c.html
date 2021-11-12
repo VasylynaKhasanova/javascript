@@ -15,7 +15,7 @@
 
     let book = {
         name: 'Book',
-        pages: [125],
+        pages: 125,
         genre: 'horror'
     }
 
@@ -23,7 +23,7 @@
 
     let book = {
         name: 'Book',
-        pages: [345],
+        pages: 345,
         genre: 'horror',
         authors: ['Author', 'Author_1', 'Author_2']
     }
@@ -31,9 +31,9 @@
     // 4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
 
     let arr = [
-        book = { name: 'Book', pages: [547], genre: 'horror', authors: ['Author', 'Author_1', 'Author_2'] },
-        book_1 = { name: 'Book_1', pages: [286], genre: 'drama', authors: ['Author', 'Author_1', 'Author_2'] },
-        book_2 = { name: 'Book_2', pages: [467], genre: 'fantasy', authors: ['Author', 'Author_1', 'Author_2'] }
+        book = { name: 'Book', pages: 547, genre: 'horror', authors: ['Author', 'Author_1', 'Author_2'] },
+        book_1 = { name: 'Book_1', pages: 286, genre: 'drama', authors: ['Author', 'Author_1', 'Author_2'] },
+        book_2 = { name: 'Book_2', pages: 467, genre: 'fantasy', authors: ['Author', 'Author_1', 'Author_2'] }
     ]
     console.log(arr [0]);
     console.log(arr [1]);
@@ -53,7 +53,8 @@
     let heightC = 10;
     let dC = 4;
     const PI = 3.14;
-    let v = PI * (dC*dC) * heightC;
+    let r = dC/2;
+    let v = PI * (r**2) * heightC;
     console.log(v);
 
     // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
