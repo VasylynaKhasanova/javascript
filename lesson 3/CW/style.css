@@ -1,0 +1,11 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-title {
+    color: darkgreen;
+}
+.product-image {
+    width: 25%;
+}
