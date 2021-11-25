@@ -67,9 +67,9 @@
 // let arrayFn = (array) => {
 //     let result = 0;
 //     for (const arrayElement of array) {
-//         result += arrayElement / array.length;
+//         result += arrayElement;
 //     }
-//     return result;
+//     return result / array.length;
 // }
 // console.log(arrayFn([15, 10, 90, 100]));
 
