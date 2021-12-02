@@ -49,7 +49,6 @@ let thirdElementText = document.getElementsByTagName('ul');
 for (const element of thirdElementText) {
     element.style.color = 'blue';
 }
-
 // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
 
 let list = document.getElementById('rules');
