@@ -151,7 +151,8 @@ for (const element of coursesArray) {
     titleBlock.innerText = element.title;
 
     let wrap = document.createElement('div')
-    wrap.classList.add('style');
+    wrap.style.display = 'flex';
+    wrap.style.columnGap = '50px';
 
     let monthBlock = document.createElement('div');
     monthBlock.innerText = element.monthDuration;
