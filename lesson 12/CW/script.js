@@ -27,12 +27,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             let button = document.createElement('button');
             button.innerText = 'Get comments';
             button.onclick = function () {
-                fetch(`https://jsonplaceholder.typicode.com/posts/${postElement.userId}/comments`)
+                fetch(`https://jsonplaceholder.typicode.com/posts/${postElement.id}/comments`)
                     .then(response => response.json())
                     .then(comments => {
 
                         for (const comment of comments) {
-                            if (postElement.userId === comment.postId) {
+                            if (postElement.id === comment.postId) {
                                 let divComment = document.createElement('div')
                                 divComment.classList.add('comment');
 
