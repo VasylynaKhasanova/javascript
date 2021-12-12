@@ -1,0 +1,28 @@
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+.divPost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    padding: 5px;
+    border: 3px solid darkgreen;
+    border-radius: 15px;
+    background: whitesmoke;
+}
+.comment {
+    width: 250px;
+    border: 5px solid darkorange;
+    border-radius: 15px;
+    padding: 10px;
+    background: lemonchiffon;
+    margin: 5px;
+}
+button {
+    margin-bottom: 5px;
+}

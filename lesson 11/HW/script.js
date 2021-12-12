@@ -17,15 +17,15 @@
 // -створити форму з інпутами для model,type та volume автівки.
 //     при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
 
-// let model = document.getElementById('model');
-// let type = document.getElementById('type');
-// let volume = document.getElementById('volume');
-// let button = document.getElementById('submit');
-//
-// let submit = function (userModel, userType, userVolume) {
-//     let array = [{userModel, userType, userVolume}];
-//     localStorage.setItem('User car', JSON.stringify(array));
-// }
-// button.onclick = function () {
-//     submit(model.value, type.value, volume.value);
-// }
+let model = document.getElementById('model');
+let type = document.getElementById('type');
+let volume = document.getElementById('volume');
+let button = document.getElementById('submit');
+
+let submit = function (userModel, userType, userVolume) {
+    let array = [{userModel, userType, userVolume}];
+    localStorage.setItem('User car', JSON.stringify(array));
+}
+button.onclick = function () {
+    submit(model.value, type.value, volume.value);
+}
