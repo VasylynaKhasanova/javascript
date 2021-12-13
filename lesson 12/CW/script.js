@@ -32,7 +32,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                     .then(comments => {
 
                         for (const comment of comments) {
-                            if (postElement.id === comment.postId) {
                                 let divComment = document.createElement('div')
                                 divComment.classList.add('comment');
 
@@ -54,7 +53,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                                 divComment.append(postId, commentId, name, email, body);
                                 divPost.appendChild(divComment);
                             }
-                        }
                     });
             }
 
