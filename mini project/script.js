@@ -3,6 +3,7 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
     .then(users => {
         let wrap = document.createElement('div');
         wrap.classList.add('wrap');
+
         for (const user of users) {
             let divUser = document.createElement('div')
             divUser.classList.add('user');
