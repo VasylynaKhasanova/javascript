@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 5px;
+            border: 3px solid darkgreen;
+            border-radius: 15px;
+            background: whitesmoke;
+            margin: 5px;
+
+        }
+
+        .button {
+            width: 90%;
+            height: 40px;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 350px;
+            padding: 5px;
+            border: 3px solid darkgreen;
+            border-radius: 15px;
+            background: whitesmoke;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+<body>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const userId = urlParams.get(`userId`);
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+        .then(response => response.json())
+        .then(user => {
+            let wrap = document.createElement('div');
+            wrap.classList.add('wrap');
+
+            let div = document.createElement('div')
+            div.classList.add('user');
+
+            let userId = document.createElement('p');
+            userId.innerText = `Id: ${user.id}`;
+
+            let name = document.createElement('h4');
+            name.innerText = `Name: ${user.name}`;
+
+            let username = document.createElement('h4');
+            username.innerText = `Username: ${user.username}`;
+
+            let email = document.createElement('p');
+            email.innerText = `Email: ${user.email}`;
+
+            let address = document.createElement('p');
+            address.innerText = `Address: street: ${user.address.street}, suite: ${user.address.suite}, city: ${user.address.city}, zipcode: ${user.address.zipcode}, geo: lat: ${user.address.geo.lat}, lng: ${user.address.geo.lng}`;
+
+            let phone = document.createElement('p');
+            phone.innerText = `Phone: ${user.phone}`;
+
+            let website = document.createElement('p');
+            website.innerText = `Website: ${user.website}`;
+
+            let company = document.createElement('p');
+            company.innerText = `Company: name: ${user.company.name}, catchPhrase: ${user.company.catchPhrase}, bs: ${user.company.bs}`;
+
+            let button = document.createElement('button');
+            button.innerText = 'Post of current user';
+            button.classList.add('button');
+            button.onclick = function () {
+
+                fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+                    .then(response => response.json())
+                    .then(posts => {
+                        for (const post of posts) {
+                            let wrapper = document.createElement('div');
+                            wrapper.classList.add('wrapper');
+
+                            let divPost = document.createElement('div')
+                            divPost.classList.add('post');
+
+                            let title = document.createElement('p');
+                            title.innerText = `Title: ${post.title}`;
+
+                            let button = document.createElement('button');
+                            button.innerText = 'More information';
+
+                            button.onclick = function () {
+                                window.location.href = './post-details.html?postId=' + `${post.id}`;
+
+                                fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}`)
+                                    .then(response => response.json())
+                                    .then(post => {
+                                        let div = document.createElement('div')
+                                        div.classList.add('user');
+
+                                        let postId = document.createElement('p');
+                                        postId.innerText = `Id: ${post.id}`;
+
+                                        let userId = document.createElement('p');
+                                        userId.innerText = `userId: ${post.userId}`;
+
+                                        let title = document.createElement('h4');
+                                        title.innerText = `Title: ${post.title}`;
+
+                                        let body = document.createElement('p');
+                                        body.innerText = `${post.body}`;
+
+                                        div.append(postId, userId, title, body);
+
+                                    });
+
+                            }
+                            divPost.append(title, button);
+                            wrap.appendChild(divPost);
+                            document.body.appendChild(wrap);
+                        }
+                    })
+                button.disabled = true;
+            }
+            div.append(userId, name, username, email, address, phone, website, company);
+            wrap.append(div, button);
+            document.body.appendChild(wrap);
+        })
+
+</script>
+</body>
+</html>

@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     row-gap: 10px;
 }
+
 .divPost {
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@
     border-radius: 15px;
     background: whitesmoke;
 }
+
 .comment {
     width: 250px;
     border: 5px solid darkorange;
@@ -23,6 +25,7 @@
     background: lemonchiffon;
     margin: 5px;
 }
+
 button {
     margin-bottom: 5px;
 }
